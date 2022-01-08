@@ -1,6 +1,7 @@
 package router
 
 import (
+	"apiserver/handler/user"
 	"net/http"
 
 	"apiserver/handler/sd"
@@ -21,6 +22,11 @@ func Load(g *gin.Engine, mw ...gin.HandlerFunc) *gin.Engine {
 	g.NoRoute(func(c *gin.Context) {
 		c.String(http.StatusNotFound, "The incorrect API route.")
 	})
+
+	u := g.Group("/v1/user")
+	{
+		u.POST("", user.Create)
+	}
 
 	// The health check handlers
 	svcd := g.Group("/sd")
