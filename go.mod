@@ -13,6 +13,7 @@ require (
 	github.com/spf13/viper v1.10.1
 	github.com/tklauser/go-sysconf v0.3.9 // indirect
 	github.com/yusufpapurcu/wmi v1.2.2 // indirect
+	github.com/zxmrlc/log v0.0.0-20200612082315-9e0c7ff11ddb
 )
 
 require (
@@ -31,6 +32,8 @@ require (
 	github.com/mitchellh/mapstructure v1.4.3 // indirect
 	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
 	github.com/modern-go/reflect2 v1.0.2 // indirect
+	github.com/onsi/ginkgo v1.16.5 // indirect
+	github.com/onsi/gomega v1.17.0 // indirect
 	github.com/pelletier/go-toml v1.9.4 // indirect
 	github.com/spf13/afero v1.6.0 // indirect
 	github.com/spf13/cast v1.4.1 // indirect
