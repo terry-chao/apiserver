@@ -11,9 +11,11 @@ require (
 require (
 	github.com/fsnotify/fsnotify v1.5.1
 	github.com/jinzhu/gorm v1.9.16
+	github.com/satori/go.uuid v1.2.0
 	github.com/spf13/viper v1.10.1
 	github.com/teris-io/shortid v0.0.0-20201117134242-e59966efd125
 	github.com/tklauser/go-sysconf v0.3.9 // indirect
+	github.com/willf/pad v0.0.0-20200313202418-172aa767f2a4
 	github.com/yusufpapurcu/wmi v1.2.2 // indirect
 	github.com/zxmrlc/log v0.0.0-20200612082315-9e0c7ff11ddb
 	golang.org/x/crypto v0.0.0-20210817164053-32db794688a5

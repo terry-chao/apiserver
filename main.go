@@ -4,6 +4,7 @@ import (
 	"apiserver/config"
 	"apiserver/model"
 	"apiserver/router"
+	"apiserver/router/middleware"
 	"errors"
 	"github.com/gin-gonic/gin"
 	"github.com/spf13/pflag"
@@ -33,13 +34,14 @@ func main() {
 	gin.SetMode(viper.GetString("runmode"))
 
 	g := gin.New()
-	middlewares := []gin.HandlerFunc{}
+	// middlewares := []gin.HandlerFunc{}
 	router.Load(
 		// Cores.
 		g,
 
 		// Middlewares.
-		middlewares...,
+		middleware.RequestId(),
+		middleware.Logging(),
 	)
 
 	// Ping the server to make sure the router is working.
