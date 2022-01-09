@@ -12,9 +12,12 @@ require (
 	github.com/fsnotify/fsnotify v1.5.1
 	github.com/jinzhu/gorm v1.9.16
 	github.com/spf13/viper v1.10.1
+	github.com/teris-io/shortid v0.0.0-20201117134242-e59966efd125
 	github.com/tklauser/go-sysconf v0.3.9 // indirect
 	github.com/yusufpapurcu/wmi v1.2.2 // indirect
 	github.com/zxmrlc/log v0.0.0-20200612082315-9e0c7ff11ddb
+	golang.org/x/crypto v0.0.0-20210817164053-32db794688a5
+	gopkg.in/go-playground/validator.v9 v9.31.0
 )
 
 require (
@@ -44,11 +47,11 @@ require (
 	github.com/subosito/gotenv v1.2.0 // indirect
 	github.com/tklauser/numcpus v0.3.0 // indirect
 	github.com/ugorji/go/codec v1.1.7 // indirect
-	golang.org/x/crypto v0.0.0-20210817164053-32db794688a5 // indirect
 	golang.org/x/sys v0.0.0-20211210111614-af8b64212486 // indirect
 	golang.org/x/text v0.3.7 // indirect
 	google.golang.org/protobuf v1.27.1 // indirect
 	gopkg.in/check.v1 v1.0.0-20190902080502-41f04d3bba15 // indirect
+	gopkg.in/go-playground/assert.v1 v1.2.1 // indirect
 	gopkg.in/ini.v1 v1.66.2 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 )
