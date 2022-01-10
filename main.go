@@ -9,6 +9,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/spf13/pflag"
 	"github.com/spf13/viper"
+	mylog "github.com/zxmrlc/log"
 	"log"
 	"net/http"
 	"time"
@@ -51,6 +52,16 @@ func main() {
 		}
 		log.Print("The router has been deployed successfully.")
 	}()
+
+	// start to listening the incoming request.
+	cert := viper.GetString("tls.cert")
+	key := viper.GetString("tls.key")
+	if cert != "" && key != "" {
+		go func() {
+			mylog.Infof("Start to listening the incoming requests on https address: %s", viper.GetString("tls.addr"))
+			mylog.Info(http.ListenAndServeTLS(viper.GetString("tls.addr"), cert, key, g).Error())
+		}()
+	}
 
 	log.Printf("Start to listening the incoming requests on http address: %s", viper.GetString("addr"))
 	log.Printf(http.ListenAndServe(viper.GetString("addr"), g).Error())
