@@ -10,6 +10,7 @@ api-server是一个企业级RESTful API服务
 ### 依赖检查
 1. 操作系统: CentOS Linux 8.x (64-bit)
 ### 构建
+0. 确保环境中有```make```
 1. 在项目根路径下,```make``` 
 ### 运行
 ```./apiserver```
